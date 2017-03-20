@@ -27,7 +27,7 @@ Set regExp = CreateObject("vbscript.regexp")
 Open logFile For Output As #1
 
 With regExp
-    .pattern = "(\d[\d])([\./-])(\d[\d])[\./-](\d+)"
+    .pattern = "(\d|\d\d)([\./-])(\d|\d\d)[\./-](\d\d\d\d|\d\d)\b"
     .Global = True
     If .Test(ActiveDocument.Content) Then
         Set regExp_Matches = .Execute(ActiveDocument.Content)
