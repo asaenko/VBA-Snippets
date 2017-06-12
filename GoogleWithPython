@@ -1,0 +1,14 @@
+'Replace google search with vba as it sometimes fails for unknown reasons
+
+Sub GoogleWithPython()
+    Dim retval
+    Dim py As String, arg As String, command As String
+    Set gShell = CreateObject("WScript.Shell")
+    
+    py = "c:\Python36\python.exe" 'Python path
+    module = "d:\Dropbox\Scripts\googler.py" 'module name
+    arg = Replace(Selection.Text, vbNewLine, "", , , vbTextCompare) 'new line stripping
+    command = py + " " + module + " " + arg 'assemble the query
+    gShell.exec (command)
+    
+End Sub
