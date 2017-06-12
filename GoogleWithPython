@@ -6,7 +6,7 @@ Sub GoogleWithPython()
     Set gShell = CreateObject("WScript.Shell")
     
     py = "c:\Python36\python.exe" 'Python path
-    module = "d:\Dropbox\Scripts\googler.py" 'module name
+    module = "d:\Dropbox\Scripts\googler.pyw" 'module name
     arg = Replace(Selection.Text, vbNewLine, "", , , vbTextCompare) 'new line stripping
     command = py + " " + module + " " + arg 'assemble the query
     gShell.exec (command)
