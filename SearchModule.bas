@@ -8,7 +8,6 @@ Public Function Search(ByVal flag As String)
     arg = Replace(Selection.Text, vbNewLine, "", , , vbTextCompare) 'new line stripping
     arg = flag + arg
     command = py + " " + module + " " + arg 'assemble the query
-    MsgBox (command)
     gShell.exec (command)
 End Function
 
