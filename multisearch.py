@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#TODO: add linguee, reverso, lingvo, stackoverflow, duckduckgo
 
 import sys
 import webbrowser
@@ -9,6 +10,7 @@ class multiSearch(object):
         self.query = query
         self.commands = {'-g': 'self.google()', '-p': 'self.proz()'}
 
+    #TODO: replace functions with links in the commands dictionary
     def google(self):
         webbrowser.open('https://www.google.ru/search?q=%22' + self.query + '%22')
 
