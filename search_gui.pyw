@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 from PySide.QtGui import *
 import multisearch
