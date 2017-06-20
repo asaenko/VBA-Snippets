@@ -8,7 +8,7 @@ class multiSearch(object):
     def __init__(self, flag, query):
         self.flag = flag
         self.query = query
-        self.commands = {'-g': 'self.google()', '-p': 'self.proz()'}
+        self.commands = {'-g': 'https://www.google.ru/search?q=%22{}%22', '-p': 'http://www.proz.com/search/?term={}&from=rus&to=eng&es=1'}
 
     #TODO: replace functions with links in the commands dictionary
     def google(self):
@@ -19,7 +19,8 @@ class multiSearch(object):
 
 
     def search(self):
-        eval(self.commands[self.flag])
+#        eval(self.commands[self.flag])
+        webbrowser.open(self.flag.format(self.query))
 
 if __name__ == '__main__':
     flag = sys.argv[1]
