@@ -17,13 +17,7 @@ class searchWindow(QWidget):
         self.searchBox = QLineEdit()
         self.searchBox.returnPressed.connect(self.startSearch)
         l.addWidget(self.searchBox)
-        self.radioG = QRadioButton()
-        self.radioP = QRadioButton()
-        self.radioG.setText('Google')
-        self.radioP.setText('Proz')
-        self.radioG.setChecked(True)
-        l.addWidget(self.radioG)
-        l.addWidget(self.radioP)
+        #add drop-down list
         self.searchButton = QPushButton()
         l.addWidget(self.searchButton)
         self.searchButton.setText('&Search')
@@ -35,11 +29,8 @@ class searchWindow(QWidget):
 
     def startSearch(self):
         q = self.searchBox.text()
-        if self.radioG.isChecked():
-            f = '-g'
-        elif self.radioP.isChecked():
-            f = '-p'
-        newSearch = multisearch.multiSearch(f, q)
+        # f =
+        newSearch = multisearch.multiSearch(f, q) # Move this to init to initialize flags
         newSearch.search()
         self.searchBox.clear()
 
