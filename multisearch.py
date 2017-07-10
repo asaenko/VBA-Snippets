@@ -10,6 +10,7 @@ class multiSearch(object):
         self.commands = dict(Google=r'https://www.google.ru/search?q=%22{query}%22',
                              Proz=r'http://www.proz.com/search/?term={query}&from=rus&to=eng&es=1',
                              Linguee=r'http://www.linguee.com/english-russian/search?query={query}',
+                             LingueeDeEn=r'http://www.linguee.de/deutsch-englisch/search?source=auto&query={query}',
                              Lingvo=r'http://forum.lingvo.ru/actualsearch.aspx?search={query}&st=t&a=&ma=0&bid=0&dt=-1&s=1&so=1',
                              Translatorscafe=r'http://www.translatorscafe.com/tcterms/en-US/?q={query}&lnsr=42&lntr=129&spec=0&diff=255',
                              StackOverflow=r'https://stackoverflow.com/search?q={query}',

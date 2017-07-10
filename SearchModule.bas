@@ -15,3 +15,8 @@ Sub Google()
     search_flag = "-g "
     Search (search_flag)
 End Sub
+
+Sub LingueeDe()
+    search_flag = "LingueeDeEn"
+    Search (search_flag)
+End Sub
