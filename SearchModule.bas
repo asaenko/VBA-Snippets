@@ -20,3 +20,8 @@ Sub LingueeDe()
     search_flag = "LingueeDeEn"
     Search (search_flag)
 End Sub
+
+Sub LingueeRu()
+    search_flag = "LingueeRuEn"
+    Search (search_flag)
+End Sub

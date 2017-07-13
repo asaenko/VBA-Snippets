@@ -29,7 +29,7 @@ class searchWindow(QWidget):
 
     def startSearch(self):
         q = self.searchBox.text()
-        # f =
+        f = "Google" #for now google search only
         newSearch = multisearch.multiSearch(f, q) # Move this to init to initialize flags
         newSearch.search()
         self.searchBox.clear()
