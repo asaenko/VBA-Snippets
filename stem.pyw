@@ -2,6 +2,7 @@
 import sys
 from nltk.stem import PorterStemmer
 from nltk.stem.snowball import RussianStemmer
+from nltk.stem.snowball import GermanStemmer
 
 
 def stemWord(word, lng):
@@ -10,6 +11,8 @@ def stemWord(word, lng):
         stemmer = RussianStemmer()
     elif lng == 'en':
         stemmer = PorterStemmer()
+    elif lng == 'de':
+        stemmer = GermanStemmer()
     else:
         return "NA"
 
