@@ -1,4 +1,11 @@
-Attribute VB_Name = "Multitran"
+ Private Function checksel()
+   If WordBasic.GetSelStartPos() = WordBasic.GetSelEndPos() Then
+        checksel = 0
+     Else
+        checksel = 1
+     End If
+ End Function
+ 
 Sub mul()
  Dim RetVal
  If checksel = 0 Then
@@ -18,6 +25,6 @@ Sub mul()
          GoTo Label1
      End If
  Next myTask
-RetVal = Shell("C:\Program Files\mt\network\multitran.exe", 1)
+RetVal = Shell("C:\mt\network\multitran.exe", 1)
 Label1:
  End Sub
