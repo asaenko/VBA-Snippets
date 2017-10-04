@@ -1,18 +1,18 @@
- Private Function checksel()
+ Private Function selected()
    If WordBasic.GetSelStartPos() = WordBasic.GetSelEndPos() Then
-        checksel = 0
+        selected = 0
      Else
-        checksel = 1
+        selected = 1
      End If
  End Function
  
 Sub mul()
  Dim RetVal
- If checksel = 0 Then
+ If selected = 0 Then
      WordBasic.SelectCurWord
  End If
 
- If checksel = 1 Then
+ If selected = 1 Then
      WordBasic.EditCopy
  End If
 
