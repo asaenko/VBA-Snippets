@@ -1,10 +1,11 @@
 Public Function Search(ByVal flag As String)
-    Dim retval
+    Dim RetVal
     Dim py As String, arg As String, command As String
     Set gShell = CreateObject("WScript.Shell")
     py = "c:\Program Files (x86)\Python36-32\pythonw.exe" 'Python path
     module = "d:\Jobz\Dropbox\Scripts\VBA-Snippets\multisearch.py" 'module name
     arg = Replace(Selection.Text, vbNewLine, "", , , vbTextCompare) 'new line stripping
+    arg = Replace(Selection.Text, "/", "%2F", , , vbTextCompare) 'replacing forward slash to make query address-bar-friendly
     arg = flag + " " + arg
     command = py + " " + module + " " + arg 'assemble the query
     'MsgBox (command)
