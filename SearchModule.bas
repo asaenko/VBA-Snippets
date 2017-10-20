@@ -36,3 +36,8 @@ Sub LingueeFr()
     search_flag = "LingueeFrEn"
     Search (search_flag)
 End Sub
+
+Sub GoogleTranslate()
+    search_flag = "GoogleTr"
+    Search (search_flag)
+End Sub

@@ -17,7 +17,8 @@ class multiSearch(object):
                              Lingvo=r'http://forum.lingvo.ru/actualsearch.aspx?search={query}&st=t&a=&ma=0&bid=0&dt=-1&s=1&so=1',
                              Translatorscafe=r'http://www.translatorscafe.com/tcterms/en-US/?q={query}&lnsr=42&lntr=129&spec=0&diff=255',
                              StackOverflow=r'https://stackoverflow.com/search?q={query}',
-                             Duckduckgo=r'https://duckduckgo.com/?q={query}&ia=meanings')
+                             Duckduckgo=r'https://duckduckgo.com/?q={query}&ia=meanings',
+                             GoogleTr=r'https://translate.google.ru/?hl=en&tab=wT#auto/en/{query}')
 
     def search(self):
         webbrowser.open(self.commands[self.flag].format(query=self.query))
